@@ -9,4 +9,4 @@
    ⚠️ ถ้ายังไม่กรอก เว็บจะทำงานปกติทุกอย่าง เพียงแต่ตัวเลขตัวนับจะไม่ขึ้น
    ============================================================ */
 window.SUPABASE_URL = 'https://YOUR-PROJECT.supabase.co';
-window.SUPABASE_ANON_KEY = 'YOUR-ANON-PUBLIC-KEY';
+window.SUPABASE_ANON_KEY = 'angahpwvpntehrglopsv';
