@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovation Sandbox | แบบฟอร์มการสมัคร</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="forms">
+
+  <div id="loadingOverlay">
+    <div class="orbit"><div class="ring"></div><div class="ring r2"></div><div class="core"></div><div class="sat"></div></div>
+    <div class="load-text">กำลังเตรียมพื้นที่ไอเดียของคุณ…</div>
+  </div>
+
+  <div class="bg-blob b1"></div><div class="bg-blob b2"></div><div class="bg-blob b3"></div>
+
+  <div class="wrap">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="brand-logos">
+            <img src="https://img1.pic.in.th/images/1--LOGO-ENG.png" alt="โลโก้หลัก LOGO ENG">
+            <span class="brand-divider"></span>
+            <img src="https://img2.pic.in.th/TH-ENG-vmic-logo-2024-NO-BG.png" alt="V-MIC logo">
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <i class="fa-solid fa-bars" style="color:var(--sky-deep)"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+            <li class="nav-item"><a class="nav-link nav-link-pill" href="index.html" data-page="home"><i class="fa-solid fa-house me-1"></i>หน้าแรก</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-pill" href="criteria.html" data-page="criteria"><i class="fa-solid fa-clipboard-check me-1"></i>หลักเกณฑ์</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-pill" href="steps.html" data-page="steps"><i class="fa-solid fa-list-ol me-1"></i>ขั้นตอน</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-pill" href="forms.html" data-page="forms"><i class="fa-solid fa-file-lines me-1"></i>แบบฟอร์ม</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page-main">
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-tag"><i class="fa-solid fa-file-lines"></i> หน้าที่ 3</span>
+      <h2 class="section-title">แบบฟอร์มการสมัคร</h2>
+      <p class="section-sub">ดาวน์โหลดเอกสารทั้งหมดเพื่อเตรียมข้อเสนอโครงการของคุณ</p>
+      <button class="btn btn-aqua btn-lg" onclick="downloadAll()">
+        <i class="fa-solid fa-download me-2"></i>ดาวน์โหลดเอกสารทั้งหมด
+      </button>
+    </div>
+
+    <div class="row g-4 mt-4 pt-2 pt-md-3">
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="doc-card">
+          <div class="doc-ico c1"><i class="fa-solid fa-file-word"></i></div>
+          <span class="doc-type">Word (.docx)</span>
+          <h6>แบบฟอร์มข้อเสนอโครงการนวัตกรรม</h6>
+          <p>เอกสารหลักสำหรับเขียนรายละเอียดโครงการที่ต้องการขอรับทุน</p>
+          <div class="dl-count"><i class="fa-solid fa-download"></i> ดาวน์โหลดแล้ว <b id="cnt-proposal">0</b> ครั้ง</div>
+          <button class="btn btn-soft w-100"
+            onclick="downloadDoc('https://docs.google.com/document/d/1sWUasRlKTgYAUwzl79DRgi3wLlf83LAD/export?format=docx','proposal')">
+            <i class="fa-solid fa-download me-2"></i>ดาวน์โหลด
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="doc-card">
+          <div class="doc-ico c2"><i class="fa-solid fa-table-cells"></i></div>
+          <span class="doc-type">Word (.docx)</span>
+          <h6>ตารางงบประมาณ</h6>
+          <p>แบบฟอร์มสำหรับจัดทำรายละเอียดและประมาณการค่าใช้จ่ายของโครงการ</p>
+          <div class="dl-count"><i class="fa-solid fa-download"></i> ดาวน์โหลดแล้ว <b id="cnt-budget">0</b> ครั้ง</div>
+          <button class="btn btn-soft w-100"
+            onclick="downloadDoc('https://docs.google.com/document/d/1Tf97MT2jXE6H0ZWzwpAnD-Zoi1uru4te/export?format=docx','budget')">
+            <i class="fa-solid fa-download me-2"></i>ดาวน์โหลด
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="doc-card">
+          <div class="doc-ico c3"><i class="fa-solid fa-file-powerpoint"></i></div>
+          <span class="doc-type">PowerPoint (.pptx)</span>
+          <h6>Template นำเสนอโครงการ</h6>
+          <p>เทมเพลตสไลด์สำหรับนำเสนอโครงการนวัตกรรมต่อคณะกรรมการ</p>
+          <div class="dl-count"><i class="fa-solid fa-download"></i> ดาวน์โหลดแล้ว <b id="cnt-ppt">0</b> ครั้ง</div>
+          <button class="btn btn-soft w-100"
+            onclick="downloadDoc('https://docs.google.com/presentation/d/1p17N3dVfokGh7MufPe5dar7sbmvqpzyn/export/pptx','ppt')">
+            <i class="fa-solid fa-download me-2"></i>ดาวน์โหลด
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="doc-card">
+          <div class="doc-ico c4"><i class="fa-solid fa-diagram-project"></i></div>
+          <span class="doc-type">PDF</span>
+          <h6>แนะนำการเขียนข้อเสนอ (VPC)</h6>
+          <p>คู่มือเขียนข้อเสนอโครงการด้วย Value Proposition Canvas</p>
+          <div class="dl-count"><i class="fa-solid fa-download"></i> ดาวน์โหลดแล้ว <b id="cnt-vpc">0</b> ครั้ง</div>
+          <button class="btn btn-soft w-100"
+            onclick="downloadDoc('https://drive.google.com/uc?export=download&id=1ROssoVo3VXL7Dc4yaXa8Imjt5LanIs1a','vpc')">
+            <i class="fa-solid fa-download me-2"></i>ดาวน์โหลด
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ส่งแบบฟอร์มทางอีเมล -->
+    <div class="glass-card p-4 p-md-5 mt-5 text-center reveal">
+      <div class="crit-ico mx-auto mb-3" style="width:64px;height:64px;font-size:1.5rem;">
+        <i class="fa-solid fa-paper-plane"></i>
+      </div>
+      <h6 class="mb-2" style="color:var(--ink);font-size:1.1rem;">ส่งแบบฟอร์มการสมัคร</h6>
+      <p class="mb-3" style="color:var(--ink-soft);">เมื่อเตรียมเอกสารครบถ้วนแล้ว สามารถส่งแบบฟอร์มการสมัครได้ที่อีเมล</p>
+      <a href="mailto:innovation.vjr@nmu.ac.th" class="btn btn-aqua btn-lg">
+        <i class="fa-solid fa-envelope me-2"></i>innovation.vjr@nmu.ac.th
+      </a>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <div class="col-md-6 col-lg-5">
+            <h5 class="fw-600 mb-2">ศูนย์นวัตกรรมทางการแพทย์วชิรพยาบาล</h5>
+            <p class="mb-1" style="color:#BAE6FD">Vajira Medical Innovation Center (V-MIC)</p>
+            <p class="mb-0" style="color:#9FD8F0;font-size:.92rem">คณะแพทยศาสตร์วชิรพยาบาล มหาวิทยาลัยนวมินทราธิราช</p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <h6 class="mb-3"><i class="fa-solid fa-headset me-2"></i>สอบถามข้อมูลเพิ่มเติม</h6>
+            <div class="contact-line"><i class="fa-solid fa-phone"></i><span>02-244-3000 ต่อ 5620</span></div>
+            <div class="contact-line"><i class="fa-solid fa-envelope"></i><a href="mailto:innovation.vjr@nmu.ac.th">innovation.vjr@nmu.ac.th</a></div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6 class="mb-3"><i class="fa-solid fa-link me-2"></i>เมนูลัด</h6>
+            <div class="d-flex flex-column gap-2">
+              <a href="criteria.html">หลักเกณฑ์และข้อกำหนด</a>
+              <a href="steps.html">ขั้นตอนการสมัคร</a>
+              <a href="forms.html">ดาวน์โหลดแบบฟอร์ม</a>
+            </div>
+          </div>
+        </div>
+        <hr style="border-color:rgba(255,255,255,.15);margin:30px 0 16px">
+        <p class="text-center mb-0" style="color:#9FD8F0;font-size:.85rem">© 2569 Vajira Medical Innovation Center (V-MIC) · Innovation Sandbox</p>
+      </div>
+    </footer>
+
+    <button id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="กลับขึ้นด้านบน"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
